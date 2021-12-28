@@ -8,6 +8,16 @@ public class ConstructMaximumBinaryTree {
 
     /**
      * Construct maximum binary tree tree node.
+     * <code>
+     *     TreeNode constructMaximumBinaryTree([3,2,1,6,0,5]) {
+     *         // 找到数组中的最大值
+     *         TreeNode root = new TreeNode(6);
+     *         // 递归调用构造左右子树
+     *         root.left = constructMaximumBinaryTree([3,2,1]);
+     *         root.right = constructMaximumBinaryTree([0,5]);
+     *         return root;
+     *     }
+     * </code>
      *
      * @param nums the nums
      * @return the tree node
@@ -19,9 +29,9 @@ public class ConstructMaximumBinaryTree {
     /**
      * Construct maximum binary tree tree node.
      *
-     * @param nums the nums
-     * @param lo   the lo
-     * @param hi   the hi
+     * @param nums the nums 数组
+     * @param lo   the lo 左边序号
+     * @param hi   the hi 右边序号
      * @return the tree node
      */
     public TreeNode constructMaximumBinaryTree(int[] nums, int lo, int hi) {
